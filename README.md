@@ -44,7 +44,7 @@ or
 jupyter notebook 'Fall Detection.ipynb'
 ```
 ## Data
-I am using [this data](http://fenix.univ.rzeszow.pl/~mkepski/ds/uf.html), which is publicly available. Videos can be downloaded as images, each corresponding to one frame. Images have been labelled manually based on where falling starts. All the images have been resized by 96x96.
+I am using all the publicly available dataset,which are mostly videos. Then those videos are broken into images of size 256x256, each corresponding to one frame. Images have been labelled manually into fall and not fall.The falling dataset is still less so color augmnetation technique used to balance both fall and not fall classes.
 
 ## CNN Architecture
 We have 6 blocks for feature extraction followed by a header. Each block contains Conv2D Layer with ReLU activation and MaxPooling2D. We start with 16 units and increase by 2 after 2 block:
@@ -54,5 +54,11 @@ We have 6 blocks for feature extraction followed by a header. Each block contain
   <img src=fallnet_architecture.png />
 </p>
 
-## Motivation
-[This paper](https://ejmcm.com/article_5270_c142136d00a954b48008a9226edd5a07.pdf) helped me a lot to work on this project, you can read it for further knowledge.
+## Losses
+![image](losses.PNG) 
+  
+## Accuracy
+![image](accuracy.PNG) 
+  
+## Results
+![image](results.PNG) 
